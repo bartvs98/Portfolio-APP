@@ -7,7 +7,7 @@ mainApp.config(function($routeProvider) {
 
     // route for home page
     .when("/", {
-      templateUrl : 'pages/homepage.html',
+      templateUrl : 'pages/parallax.html',
       controller  : 'mainController'
     })
 
