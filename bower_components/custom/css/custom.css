@@ -170,7 +170,7 @@ h1 {
 }
 
 .bgimg-2 {
-  height: 600px;
+  height: 650px;
   background-image: url("../../../img/banner1.jpg");
 }
 
@@ -242,7 +242,7 @@ h1 {
     height: 400px !important;
   }
   .bgimg-2 {
-    height: 300px !important;
+    height: 400px !important;
   }
   .arrowDownParallax {
     margin-top: 80px !important;
