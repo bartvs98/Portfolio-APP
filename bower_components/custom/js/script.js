@@ -7,16 +7,18 @@ mainApp.config(function($routeProvider) {
 
     // route for home page
     .when("/", {
-      templateUrl : 'pages/homepage.html',
-      controller  : 'mainController'
+      templateUrl: 'pages/homepage.html',
+      controller: 'mainController'
     })
 
     .when("/404", {
-      templateUrl : "pages/404.html",
-      controller  : "404Controller"
+      templateUrl: "pages/404.html",
+      controller: "404Controller"
     })
 
-    .otherwise({ redirectTo: '/404' });
+    .otherwise({
+      redirectTo: '/404'
+    });
 })
 
 // create controller and inject Angular's $scope
@@ -25,9 +27,9 @@ mainApp.controller("mainController", function($scope, $sce, $location, $anchorSc
   $scope.caption = "PRESENT YOURSELF IN AN UNIQUE WAY";
 
   $scope.aboutMe = "My name is Bart van Straaten, I am situated in The Netherlands. " +
-                   "Currently I am studying HBO-ICT at the Hogeschool Utrecht. " +
-                   "I just finished the first year of Software And Information Engineering which is the branch I have chosen to develop myself in. " +
-                   "This includes but is not limited to:";
+    "Currently I am studying HBO-ICT at the Hogeschool Utrecht. " +
+    "I just finished the first year of Software And Information Engineering which is the branch I have chosen to develop myself in. " +
+    "This includes but is not limited to:";
 });
 
 mainApp.controller("404Controller", function($scope) {
