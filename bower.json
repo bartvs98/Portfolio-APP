@@ -1,0 +1,23 @@
+{
+  "name": "boekhouding",
+  "homepage": "https://github.com/bartvs98/Boekhouding-APP",
+  "authors": [
+    "bartvs98 <bartvanstraaten98@gmail.com>"
+  ],
+  "description": "-",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5"
+  }
+}

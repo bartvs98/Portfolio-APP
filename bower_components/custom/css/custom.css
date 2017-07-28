@@ -1,0 +1,253 @@
+/* Main styles */
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #757575;
+}
+
+a {
+  font-size: 25px;
+  text-decoration: none;
+  list-style: none;
+  color: #757575;
+}
+
+h1 {
+  margin-top: 35px;
+}
+
+/* Header and header content style */
+
+.header {
+  z-index: 2;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.23);
+}
+
+.link {
+  margin-top: 18px;
+  text-align: center;
+}
+.link a {
+  padding: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: -10px;
+  transition: all 0.2s ease;
+}
+
+.linkText {
+  margin: 0;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+}
+
+.linkIcon {
+  font-size: 30px !important;
+  color: #d4d4d4;
+}
+
+/* Page arrow styles */
+
+.arrowDown {
+  margin-top: 60px;
+  font-size: 40px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arrowDownParallax {
+  margin-top: 200px;
+  font-size: 40px !important;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arrowDownParallax:hover {
+  padding-top: 10px;
+}
+
+/* Content holders */
+
+.container {
+  height: 100%;
+  padding: 0;
+}
+
+.info {
+  text-align: initial;
+  padding: 20px;
+}
+
+.content {
+  padding:50px 80px;
+  text-align: center;
+  background-color:white;
+  color: #777;
+}
+
+.holder {
+  margin: auto;
+  max-width: 560px;
+}
+
+.holder a {
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
+.footer {
+  height: 300px;
+  text-align: center;
+  padding:20px 50px;
+  background-color:white;
+  color: #777;
+}
+
+/* Circle styles */
+
+.cricleHolder {
+  display: block;
+}
+
+.circle {
+  width: 170px;
+  height: 170px;
+  margin: 50px;
+  margin-bottom: 20px;
+  display: inline-grid;
+  background: white;
+  color: tomato;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.23);
+  border: 5px solid tomato;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.circle:hover {
+  color: white;
+  background: tomato;
+}
+
+.circle p {
+  font-size: 54px;
+  font-weight: bold;
+}
+
+/* Parallax styles */
+
+.bgimg-1, .bgimg-2 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.65;
+}
+
+.bgimg-1 {
+  height: 650px;
+  background-image: url("../../../img/coding2test.jpg");
+}
+
+.bgimg-2 {
+  height: 600px;
+  background-image: url("../../../img/banner.jpg");
+}
+
+.caption {
+  position: inherit;
+  margin: auto;
+  max-width: 500px;
+  top: 45%;
+  left: 0;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  background-color: transparent;
+  color: #f7f7f7;
+}
+
+/* Slideshow style */
+
+.slideDot {
+  color: #bbbbbb;
+  cursor: pointer;
+  font-size: 20px !important;
+}
+
+.active {
+  color: #757575;
+}
+
+/* Hover classes */
+
+.hoverRed:hover {
+  color: tomato;
+}
+
+/* Media Queries */
+
+@media (max-width: 780px) {
+  .link {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .linkIcon {
+  	color: #757575;
+  }
+
+  .linkIcon:hover {
+  	color: tomato;
+  }
+
+  .linkText {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .imgHolder {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .bgimg-1 {
+    height: 400px !important;
+  }
+
+  .bgimg-2 {
+    height: 300px !important;
+  }
+
+  .arrowDownParallax {
+    margin-top: 80px !important;
+  }
+
+  .content {
+ 	  padding: 50px 0px !important;
+  }
+
+  .info {
+    padding: 20px !important;
+  }
+}

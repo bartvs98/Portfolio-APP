@@ -1,0 +1,165 @@
+<!-- Homepage.html -->
+
+<!-- First parallax image -->
+<div class="bgimg-1" id="home">
+  <div class="caption">
+    <span class="border">
+      {{ caption }}
+    </span>
+  </div>
+  <div class="caption">
+    <span class="border">
+      <a id="toAboutFromPage">
+        <i class="material-icons arrowDownParallax">keyboard_arrow_down</i>
+      </a>
+    </span>
+  </div>
+</div>
+
+<!-- About div -->
+<div class="content" id="about">
+  <h1>About</h1>
+
+  <div class="holder">
+    <div class="info">
+      {{ aboutMe }}
+    </div>
+  </div>
+
+  <!-- About circles -->
+  <div class="cricleHolder">
+    <div style="display: inline-grid;">
+      <div class="circle">
+        <p>UML</p>
+      </div>
+      <span>Unified Modelling Language</span>
+    </div>
+    <div style="display: inline-grid;">
+      <div class="circle">
+        <p>SQL</p>
+      </div>
+      <span>Structured Query Language</span>
+    </div>
+    <div style="display: inline-grid;">
+      <div class="circle">
+        <p>JS</p>
+      </div>
+      <span>Javascript</span>
+    </div>
+    <div style="display: inline-grid;">
+      <div class="circle">
+        <p>JAVA</p>
+      </div>
+      <span>Object Oriented Programming Language</span>
+    </div>
+  </div>
+
+  <a id="toMyWorkFromPage">
+    <i class="material-icons arrowDown hoverRed">keyboard_arrow_down</i>
+  </a>
+</div>
+
+<!-- My work div -->
+<div class="content" style="background: #efefef;" id="myWork">
+  <h1>My work</h1>
+
+  <p style="font-size:25px; margin-bottom:5px; margin-top:35px;">Here are some examples of my work.</p>
+
+  <!-- First "slide" of my work -->
+  <div class="holder" id="work1">
+    <img src="img/investments.jpg" style="width: 100%;">
+    <a href="https://individual-pass.herokuapp.com" class="hoverRed">Keep track of your investments</a>
+    <div class="info">
+      <p>
+        A platform build to keep track of your investments and generate a clear and easy to use visual interface.
+        It relies on the data the user provides to generate graphs.
+      </p>
+    </div>
+  </div>
+
+  <!-- Second "slide" of my work -->
+  <div class="holder" id="work2">
+    <img src="img/slide2.jpg" style="width: 100%;">
+    <a href="#!" class="hoverRed">Test link</a>
+    <div class="info">
+      <p>
+        Description
+      </p>
+    </div>
+  </div>
+
+  <!-- Slide dots -->
+  <div id="dots">
+    <i class="material-icons slideDot" id="dot1">lens</i>
+    <i class="material-icons slideDot" id="dot2">lens</i>
+  </div>
+
+  <a id="toContactFromPage">
+    <i class="material-icons arrowDown hoverRed">keyboard_arrow_down</i>
+  </a>
+</div>
+
+<!-- Second parallax image -->
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+      STAND OUT FROM THE REST
+    </span>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer" id="contact">
+  <div>
+    <a id="toHomeFromPage">
+      <i class="material-icons arrowDown hoverRed" style="margin-top:10px;">keyboard_arrow_up</i>
+    </a>
+  </div>
+
+  <a href="https://github.com/bartvs98" class="hoverRed">My Github</a>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#toAboutFromPage").click(function () {
+      $('html, body').animate({
+        scrollTop: $('#about').offset().top
+      }, 'slow');
+    });
+
+    $("#toMyWorkFromPage").click(function () {
+      $('html, body').animate({
+        scrollTop: $('#myWork').offset().top
+      }, 'slow');
+    });
+
+    $("#toContactFromPage").click(function () {
+      $('html, body').animate({
+        scrollTop: $('#contact').offset().top
+      }, 'slow');
+    });
+
+    $("#toHomeFromPage").click(function () {
+      $('html, body').animate({
+        scrollTop: $('#home').offset().top
+      }, 'slow');
+    });
+
+    $("#work2").hide();
+    $("#dot1").addClass("active");
+
+    $("#dot1").click(function() {
+      $("#work1").fadeIn();
+      $("#work2").hide();
+      $("#dot1").addClass("active");
+      $("#dot2").removeClass("active");
+    });
+
+    $("#dot2").click(function() {
+      $("#work2").fadeIn();
+      $("#work1").hide();
+      $("#dot2").addClass("active");
+      $("#dot1").removeClass("active");
+    });
+  })
+</script>
