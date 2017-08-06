@@ -30,31 +30,31 @@
   <!-- About circles -->
   <div class="cricleHolder">
     <div class="circleDiv">
-      <div class="circle">
+      <div class="circle invert">
         <p>UML</p>
       </div>
       <span>Unified Modelling Language</span>
     </div>
     <div class="circleDiv">
-      <div class="circle">
+      <div class="circle invert">
         <p>SQL</p>
       </div>
       <span>Structured Query Language</span>
     </div>
     <div class="circleDiv">
-      <div class="circle">
+      <div class="circle invert">
         <p>GIT</p>
       </div>
       <span>Version Control</span>
     </div>
     <div class="circleDiv">
-      <div class="circle">
+      <div class="circle invert">
         <p>JS</p>
       </div>
       <span>Javascript</span>
     </div>
     <div class="circleDiv">
-      <div class="circle">
+      <div class="circle invert">
         <p>JAVA</p>
       </div>
       <span>Object Oriented Programming Language</span>
@@ -70,7 +70,7 @@
 <div class="content" style="background: #efefef;" id="myWork">
   <h1>My work</h1>
 
-  <p style="font-size:25px; margin-bottom:5px; margin-top:35px;">Here are some examples of my work.</p>
+  <!-- <p style="font-size:25px; margin-bottom:5px; margin-top:35px;">Here are some examples of my work.</p> -->
 
   <!-- First "slide" of my work -->
   <div class="holder" id="work1">
@@ -115,12 +115,27 @@
 </div>
 
 <!-- Footer -->
-<div class="footer" id="contact">
+<div class="contactHolder" id="contact">
+  <h1>Contact me</h1>
+
+  <div style="display:inline-grid;">
+    <p style="text-align: justify;">Shoot me a message for questions or anything of that nature.</p>
+    <input type="email" class="mailInput" placeholder="Your E-mail">
+    <textarea class="mailInput" style="resize: none;" placeholder="Your message" rows="8" cols="80"></textarea>
+    <button style="opacity: 0.5" class="sendButton" disabled>Send</button>
+  </div>
+</div>
+
+<div class="footer">
   <div>
     <a id="toHomeFromPage">
       <i class="material-icons arrowDown hoverRed" style="margin-top:10px;">keyboard_arrow_up</i>
     </a>
   </div>
 
-  <a href="https://github.com/bartvs98" class="hoverRed">My Github</a>
+  <p>
+    The sourcecode for this website can be found on my github
+    <a href="https://github.com/bartvs98/Portfolio-WebPage/tree/develop" class="hoverRed" style="font-size:16px !important; color:tomato !important">here</a>
+    aswell as my other (public) projects.
+  </p>
 </div>
