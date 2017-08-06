@@ -11,4 +11,4 @@ I will also use this to display my other projects as I make more "apps".
 * **Editor:** Atom
 * **Version Control:** Git
 * **Debug:** Chrome Devtools
-* **Browsers tested:** Chrome, Chrome Mobile
+* **Browsers tested:** Chrome, Chrome Mobile, Edge
