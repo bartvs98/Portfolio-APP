@@ -1,11 +1,11 @@
 <!-- Homepage.html -->
+<script src="bower_components\custom\js\homepagescript.js"></script>
+<script src="bower_components\typed.js\lib\typed.min.js"></script>
 
 <!-- First parallax image -->
 <div class="bgimg-1" id="home">
   <div class="caption">
-    <span class="border">
-      {{ caption }}
-    </span>
+    <span class="border element"></span>
   </div>
   <div class="caption">
     <span class="border">
@@ -28,26 +28,32 @@
 
   <!-- About circles -->
   <div class="cricleHolder">
-    <div style="display: inline-grid;">
-      <div class="circle">
+    <div class="circleDiv">
+      <div class="circle invert">
         <p>UML</p>
       </div>
       <span>Unified Modelling Language</span>
     </div>
-    <div style="display: inline-grid;">
-      <div class="circle">
+    <div class="circleDiv">
+      <div class="circle invert">
         <p>SQL</p>
       </div>
       <span>Structured Query Language</span>
     </div>
-    <div style="display: inline-grid;">
-      <div class="circle">
+    <div class="circleDiv">
+      <div class="circle invert">
+        <p>GIT</p>
+      </div>
+      <span>Version Control</span>
+    </div>
+    <div class="circleDiv">
+      <div class="circle invert">
         <p>JS</p>
       </div>
       <span>Javascript</span>
     </div>
-    <div style="display: inline-grid;">
-      <div class="circle">
+    <div class="circleDiv">
+      <div class="circle invert">
         <p>JAVA</p>
       </div>
       <span>Object Oriented Programming Language</span>
@@ -63,7 +69,7 @@
 <div class="content" style="background: #efefef;" id="myWork">
   <h1>My work</h1>
 
-  <p style="font-size:25px; margin-bottom:5px; margin-top:35px;">Here are some examples of my work.</p>
+  <!-- <p style="font-size:25px; margin-bottom:5px; margin-top:35px;">Here are some examples of my work.</p> -->
 
   <!-- First "slide" of my work -->
   <div class="holder" id="work1">
@@ -71,8 +77,7 @@
     <a href="https://individual-pass.herokuapp.com" class="hoverRed">Keep track of your investments</a>
     <div class="info">
       <p>
-        A platform build to keep track of your investments and generate a clear and easy to use visual interface.
-        It relies on the data the user provides to generate graphs.
+        A platform build to keep track of your investments and generate a clear and easy to use visual interface. It relies on the data the user provides to generate graphs.
       </p>
     </div>
   </div>
@@ -80,10 +85,10 @@
   <!-- Second "slide" of my work -->
   <div class="holder" id="work2">
     <img src="img/slide2.jpg" style="width: 100%;">
-    <a href="#!" class="hoverRed">Test link</a>
+    <a href="#!" class="hoverRed">Lorem ipsum</a>
     <div class="info">
       <p>
-        Description
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non felis vitae augue aliquam pharetra sit amet non nulla. Suspendisse aliquam turpis id laoreet egestas. Etiam feugiat nibh quis ligula vehicula laoreet.
       </p>
     </div>
   </div>
@@ -100,66 +105,38 @@
 </div>
 
 <!-- Second parallax image -->
-<div class="bgimg-2">
+<!-- <div class="bgimg-2">
   <div class="caption">
     <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
       STAND OUT FROM THE REST
     </span>
   </div>
-</div>
+</div> -->
 
 <!-- Footer -->
-<div class="footer" id="contact">
+<div class="contactHolder" id="contact">
+  <h1>Contact me</h1>
+
+  <div style="display:flex; justify-content:center;">
+    <div style="display:inline-grid; text-align:left;">
+      <p>Shoot me a message for questions or anything of that nature.</p>
+      <input type="email" class="mailInput" placeholder="Your E-mail">
+      <textarea class="mailInput" style="resize: none;" placeholder="Your message" rows="8" cols="80"></textarea>
+      <button style="opacity: 0.5" class="sendButton" disabled>Send</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
   <div>
     <a id="toHomeFromPage">
-      <i class="material-icons arrowDown hoverRed" style="margin-top:10px;">keyboard_arrow_up</i>
+      <i class="material-icons arrowUp hoverBlack">keyboard_arrow_up</i>
     </a>
   </div>
 
-  <a href="https://github.com/bartvs98" class="hoverRed">My Github</a>
+  <p>
+    Created by me © 2017. The sourcecode can be found on
+    <a href="https://github.com/bartvs98/Portfolio-WebPage/tree/develop" class="footerLink hoverWhite">My Github</a>
+  </p>
 </div>
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("#toAboutFromPage").click(function () {
-      $('html, body').animate({
-        scrollTop: $('#about').offset().top
-      }, 'slow');
-    });
-
-    $("#toMyWorkFromPage").click(function () {
-      $('html, body').animate({
-        scrollTop: $('#myWork').offset().top
-      }, 'slow');
-    });
-
-    $("#toContactFromPage").click(function () {
-      $('html, body').animate({
-        scrollTop: $('#contact').offset().top
-      }, 'slow');
-    });
-
-    $("#toHomeFromPage").click(function () {
-      $('html, body').animate({
-        scrollTop: $('#home').offset().top
-      }, 'slow');
-    });
-
-    $("#work2").hide();
-    $("#dot1").addClass("active");
-
-    $("#dot1").click(function() {
-      $("#work1").fadeIn();
-      $("#work2").hide();
-      $("#dot1").addClass("active");
-      $("#dot2").removeClass("active");
-    });
-
-    $("#dot2").click(function() {
-      $("#work2").fadeIn();
-      $("#work1").hide();
-      $("#dot2").addClass("active");
-      $("#dot1").removeClass("active");
-    });
-  })
-</script>

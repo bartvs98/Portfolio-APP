@@ -1,4 +1,5 @@
 /* Main styles */
+
 body {
   height: 100%;
   padding: 0;
@@ -18,23 +19,24 @@ h1 {
   margin-top: 35px;
 }
 
+
 /* Header and header content style */
 
 .header {
   z-index: 2;
-  position: fixed;
+  position: absolute;
   display: block;
   width: 100%;
   height: 70px;
   top: 0;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.23);
+  transition: all 0.1s ease;
 }
 
 .link {
   margin-top: 18px;
   text-align: center;
 }
+
 .link a {
   padding: 10px;
   cursor: pointer;
@@ -42,7 +44,17 @@ h1 {
   margin-left: 10px;
   margin-right: 10px;
   margin-top: -10px;
-  transition: all 0.2s ease;
+  color: white;
+}
+
+.headerActive {
+  position: fixed;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
+}
+
+.linkActive {
+  color: #757575 !important;
 }
 
 .linkText {
@@ -53,8 +65,20 @@ h1 {
 
 .linkIcon {
   font-size: 30px !important;
-  color: #d4d4d4;
+  color: #dedede;
 }
+
+.iconActive, .iconActiveMobile {
+  color: #d4d4d4 !important;
+}
+
+.footerLink {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
 
 /* Page arrow styles */
 
@@ -66,9 +90,9 @@ h1 {
 }
 
 .arrowDownParallax {
-  margin-top: 200px;
+  margin-top: 350px;
   font-size: 40px !important;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -76,6 +100,15 @@ h1 {
 .arrowDownParallax:hover {
   padding-top: 10px;
 }
+
+.arrowUp {
+  margin-top: 10px;
+  font-size: 40px !important;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
 
 /* Content holders */
 
@@ -90,9 +123,9 @@ h1 {
 }
 
 .content {
-  padding:50px 80px;
+  padding: 50px 80px;
   text-align: center;
-  background-color:white;
+  background-color: #ffffff;
   color: #777;
 }
 
@@ -106,18 +139,68 @@ h1 {
   transition: all 0.2s ease;
 }
 
-.footer {
-  height: 300px;
+.contactHolder {
   text-align: center;
-  padding:20px 50px;
-  background-color:white;
+  padding: 50px 80px;
+  background-color: #ffffff;
   color: #777;
 }
+
+.footer {
+  height: 150px;
+  text-align: center;
+  background-color: tomato;
+  color: #ffffff;
+}
+
+.mailInput {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: calc(100% - 22px);
+  font-size: 16px;
+  font-family: roboto;
+  font-style: italic;
+  /*border-radius: 4px;*/
+  border: 1px solid #dedede;
+}
+
+.mailInput:focus {
+  outline-color: tomato;
+  font-style: normal;
+}
+
+.sendButton {
+  width: 120px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  border: 1px solid tomato;
+  /*border-radius: 4px;*/
+  background: tomato;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sendButton:focus {
+  outline: none;
+}
+
 
 /* Circle styles */
 
 .cricleHolder {
-  display: block;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.circleDiv {
+  display: inline-grid;
 }
 
 .circle {
@@ -126,9 +209,9 @@ h1 {
   margin: 50px;
   margin-bottom: 20px;
   display: inline-grid;
-  background: white;
+  background: #ffffff;
   color: tomato;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
   border: 5px solid tomato;
   border-radius: 50%;
   text-align: center;
@@ -136,15 +219,11 @@ h1 {
   transition: all 0.3s ease;
 }
 
-.circle:hover {
-  color: white;
-  background: tomato;
-}
-
 .circle p {
   font-size: 54px;
   font-weight: bold;
 }
+
 
 /* Parallax styles */
 
@@ -158,19 +237,14 @@ h1 {
 }
 
 .bgimg-1 {
-  height: 650px;
-  background-image: url("../../../img/coding2test.jpg");
-}
-
-.bgimg-2 {
-  height: 600px;
-  background-image: url("../../../img/banner.jpg");
+  height: 1000px;
+  background-image: url("../../../img/banner1.jpg");
 }
 
 .caption {
   position: inherit;
   margin: auto;
-  max-width: 500px;
+  max-width: 1250px;
   top: 45%;
   left: 0;
   text-align: center;
@@ -178,12 +252,32 @@ h1 {
 }
 
 .caption span.border {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   letter-spacing: 10px;
   background-color: transparent;
   color: #f7f7f7;
 }
+
+.typed-cursor {
+  color: #ffffff;
+  font-size: 35px;
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 /* Slideshow style */
 
@@ -197,11 +291,26 @@ h1 {
   color: #757575;
 }
 
+
 /* Hover classes */
 
 .hoverRed:hover {
   color: tomato;
 }
+
+.hoverWhite:hover {
+  color: #ffffff;
+}
+
+.hoverBlack:hover {
+  color: black;
+}
+
+.invert:hover {
+  color: #ffffff;
+  background: tomato;
+}
+
 
 /* Media Queries */
 
@@ -210,17 +319,17 @@ h1 {
     width: 100%;
     margin-left: 0;
   }
-
   .linkIcon {
-  	color: #757575;
+    color: #ffffff;
   }
-
   .linkIcon:hover {
-  	color: tomato;
+    color: tomato;
   }
-
   .linkText {
     display: none;
+  }
+  .caption span.border {
+    font-size: 25px;
   }
 }
 
@@ -232,22 +341,21 @@ h1 {
 
 @media (max-width: 480px) {
   .bgimg-1 {
-    height: 400px !important;
+    height: 750px !important;
   }
-
-  .bgimg-2 {
-    height: 300px !important;
-  }
-
   .arrowDownParallax {
-    margin-top: 80px !important;
+    margin-top: 200px !important;
   }
-
   .content {
- 	  padding: 50px 0px !important;
+    padding: 50px 0px !important;
   }
-
+  .contactHolder {
+    padding: 50px 20px !important;
+  }
   .info {
     padding: 20px !important;
+  }
+  .sendButton {
+    width: 100%;
   }
 }
