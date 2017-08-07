@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var options = {
-    strings: ["MY NAME IS BART, I'M A WEBDEVELOPER APPRENTICE ^1000 AND THIS IS MY PORTFOLIO"],
+    strings: ["MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
     startDelay: 1100,
     typeSpeed: 50,
     backSpeed: 20,
