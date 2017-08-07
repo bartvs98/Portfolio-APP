@@ -1,14 +1,15 @@
 $(document).ready(function() {
 
   var options = {
-    strings: ["MY NAME IS BART, I'M A WEBDEVELOPER APPRENTICE. ^700 AND THIS IS MY PORTFOLIO"],
+    strings: ["MY NAME IS BART, I'M A WEBDEVELOPER APPRENTICE ^1000 AND THIS IS MY PORTFOLIO"],
+    startDelay: 1100,
     typeSpeed: 50,
     backSpeed: 20,
     showCursor: true,
     cursorChar: "|"
   }
 
-  var typed = new Typed(".element", options);
+  var typed = new Typed(".border", options);
 
   $("#toAboutFromPage").click(function() {
     $('html, body').animate({

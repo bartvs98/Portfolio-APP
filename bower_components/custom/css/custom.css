@@ -238,10 +238,11 @@ h1 {
 
 .bgimg-1 {
   height: 1000px;
-  background-image: url("../../../img/banner1.jpg");
+  background-image: url("../../../img/banner1_compressed.jpg");
 }
 
 .caption {
+  min-height: 80px;
   position: inherit;
   margin: auto;
   max-width: 1250px;
