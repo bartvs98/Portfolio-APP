@@ -241,12 +241,6 @@ h1 {
   background-image: url("../../../img/banner1.jpg");
 }
 
-
-/*.bgimg-2 {
-  height: 650px;
-  background-image: url("../../../img/banner2.jpg");
-}*/
-
 .caption {
   position: inherit;
   margin: auto;
@@ -283,6 +277,7 @@ h1 {
     opacity: 1;
   }
 }
+
 
 /* Slideshow style */
 
@@ -348,9 +343,6 @@ h1 {
   .bgimg-1 {
     height: 750px !important;
   }
-  /*.bgimg-2 {
-    height: 400px !important;
-  }*/
   .arrowDownParallax {
     margin-top: 200px !important;
   }
