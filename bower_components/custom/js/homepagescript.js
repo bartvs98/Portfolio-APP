@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  // Typed caption
+
   var options = {
     strings: ["MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
     startDelay: 1100,
@@ -10,6 +12,34 @@ $(document).ready(function() {
   }
 
   var typed = new Typed(".border", options);
+
+  // Header scrolling
+
+  $("#toHome").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#home').offset().top
+    }, 'slow');
+  });
+
+  $("#toAbout").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#about').offset().top
+    }, 'slow');
+  });
+
+  $("#toMyWork").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#myWork').offset().top
+    }, 'slow');
+  });
+
+  $("#toContact").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#contact').offset().top
+    }, 'slow');
+  });
+
+  // Arrow scrolling
 
   $("#toAboutFromPage").click(function() {
     $('html, body').animate({
@@ -35,6 +65,8 @@ $(document).ready(function() {
     }, 'slow');
   });
 
+  // "Slideshow" script
+
   $("#work2").hide();
   $("#dot1").addClass("active");
 
@@ -53,11 +85,13 @@ $(document).ready(function() {
   });
 })
 
+// Animated header dependant on viewport
+
 $(function() {
   const mq = window.matchMedia("(max-width: 580px)");
 
   $(window).on("scroll", function() {
-    if(mq.matches) {
+    if (mq.matches) {
       if ($(window).scrollTop() > 730) {
         $(".header").addClass("headerActive");
         $(".linkIcon").addClass("iconActiveMobile");
@@ -66,15 +100,15 @@ $(function() {
         $(".linkIcon").removeClass("iconActiveMobile");
       }
     } else {
-      if ($(window).scrollTop() > 980) {
-        $(".header").addClass("headerActive");
-        $(".link a").addClass("linkActive");
-        $(".linkIcon").addClass("iconActive");
-      } else {
-        $(".header").removeClass("headerActive");
-        $(".link a").removeClass("linkActive");
-        $(".linkIcon").removeClass("iconActive");
-      }
+      // if ($(window).scrollTop() > 980) {
+      //   $(".header").addClass("headerActive");
+      //   $(".link a").addClass("linkActive");
+      //   $(".linkIcon").addClass("iconActive");
+      // } else {
+      //   $(".header").removeClass("headerActive");
+      //   $(".link a").removeClass("linkActive");
+      //   $(".linkIcon").removeClass("iconActive");
+      // }
     }
   });
 });

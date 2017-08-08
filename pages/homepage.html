@@ -1,6 +1,41 @@
 <!-- Homepage.html -->
 <script src="bower_components\custom\js\homepagescript.js"></script>
 
+<!-- Header -->
+<div class="header">
+  <div class="link">
+
+    <a id="toHome">
+        <i class="material-icons linkIcon">home</i>
+        <p class="linkText hoverRed">
+          Home
+        </p>
+      </a>
+
+    <a id="toAbout">
+        <i class="material-icons linkIcon">info</i>
+        <p class="linkText hoverRed">
+          About
+        </p>
+      </a>
+
+    <a id="toMyWork">
+        <i class="material-icons linkIcon">work</i>
+        <p class="linkText hoverRed">
+          My work
+        </p>
+      </a>
+
+    <a id="toContact">
+        <i class="material-icons linkIcon">email</i>
+        <p class="linkText hoverRed">
+          Contact
+        </p>
+      </a>
+
+  </div>
+</div>
+
 <!-- First parallax image -->
 <div class="bgimg-1" id="home">
   <div class="caption">
@@ -76,7 +111,7 @@
     <a href="https://individual-pass.herokuapp.com" class="hoverRed">Keep track of your investments</a>
     <div class="info">
       <p>
-        A platform build to keep track of your investments and generate a clear and easy to use visual interface. It relies on the data the user provides to generate graphs.
+        {{ work1 }}
       </p>
     </div>
   </div>
@@ -87,7 +122,7 @@
     <a href="#!" class="hoverRed">Lorem ipsum</a>
     <div class="info">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non felis vitae augue aliquam pharetra sit amet non nulla. Suspendisse aliquam turpis id laoreet egestas. Etiam feugiat nibh quis ligula vehicula laoreet.
+        {{ work2 }}
       </p>
     </div>
   </div>
@@ -112,21 +147,29 @@
       <p>Shoot me a message for questions or anything of that nature.</p>
       <input type="email" class="mailInput" placeholder="Your E-mail">
       <textarea class="mailInput" style="resize: none;" placeholder="Your message" rows="8" cols="80"></textarea>
-      <button style="opacity: 0.5" class="sendButton" disabled>Send</button>
+      <button class="sendButton" disabled>Send</button>
     </div>
   </div>
 
 </div>
 
 <div class="footer">
-  <div>
-    <a id="toHomeFromPage">
-      <i class="material-icons arrowUp hoverBlack">keyboard_arrow_up</i>
-    </a>
-  </div>
+  <div class="footerContent">
+    <div class="copyright">
+      <p>Created by me © 2017</p>
+    </div>
 
-  <p>
-    Created by me © 2017. The sourcecode can be found on
-    <a href="https://github.com/bartvs98/Portfolio-WebPage/tree/develop" class="footerLink hoverWhite">My Github</a>
-  </p>
+    <div class="arrowUpHolder">
+      <a id="toHomeFromPage">
+        <i class="material-icons arrowUp hoverBlack">keyboard_arrow_up</i>
+      </a>
+    </div>
+
+    <div class="footerLinkHolder">
+      <a href="https://github.com/bartvs98" class="footerLink hoverBlack"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a class="footerLink hoverBlack"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="mailto:bartvanstraaten98@gmail.com" class="footerLink hoverBlack"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.reddit.com/user/hierisfreek/" class="footerLink hoverBlack"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a>
+    </div>
+  </div>
 </div>
