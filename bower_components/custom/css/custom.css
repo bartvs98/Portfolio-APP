@@ -15,10 +15,6 @@ a {
   color: #757575;
 }
 
-h1 {
-  margin-top: 35px;
-}
-
 
 /* Header and header content style */
 
@@ -189,8 +185,9 @@ h1 {
   font-size: 16px;
   font-family: roboto;
   font-style: italic;
-  /*border-radius: 4px;*/
-  border: 1px solid #dedede;
+  /*border: 1px solid #dedede;*/
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 
 .mailInput:focus {
@@ -204,11 +201,11 @@ h1 {
   margin-top: 5px;
   margin-bottom: 30px;
   border: 1px solid tomato;
-  /*border-radius: 4px;*/
   background: tomato;
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 
 .sendButton:focus {
@@ -219,6 +216,9 @@ h1 {
 /* Circle styles */
 
 .cricleHolder {
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -343,6 +343,9 @@ h1 {
 /* Media Queries */
 
 @media (max-width: 780px) {
+  h1 {
+    margin-top: 35px;
+  }
   .link {
     width: 100%;
     margin-left: 0;
@@ -375,7 +378,7 @@ h1 {
     width: 100%;
   }
   .caption {
-    top: 25% !important;
+    top: 35% !important;
     min-height: 190px !important;
   }
 }

@@ -28,7 +28,7 @@ mainApp.controller("mainController", function($scope, $sce, $location, $anchorSc
   $scope.aboutMe = "My name is Bart van Straaten, I am situated in The Netherlands. " +
     "Currently I am studying HBO-ICT at the Hogeschool Utrecht. " +
     "I just finished the first year of Software And Information Engineering which is the branch I have chosen to develop myself in. " +
-    "This includes but is not limited to:";
+    "Things I used include but are not limited to:";
 
   $scope.work1 = "A platform build to keep track of your investments and generate a clear and easy to use visual interface. It relies on the data the user provides to generate graphs." ;
   $scope.work2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non felis vitae augue aliquam pharetra sit amet non nulla. Suspendisse aliquam turpis id laoreet egestas. Etiam feugiat nibh quis ligula vehicula laoreet.";
