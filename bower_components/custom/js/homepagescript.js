@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $(".fade-in").hide();
-  $("#aboutFade").hide();
 
   // Header scrolling
 
@@ -53,25 +52,6 @@ $(document).ready(function() {
       scrollTop: $('#home').offset().top
     }, 'slow');
   });
-
-  // "Slideshow" script
-
-  $("#work2").hide();
-  $("#dot1").addClass("active");
-
-  $("#dot1").click(function() {
-    $("#work1").fadeIn();
-    $("#work2").hide();
-    $("#dot1").addClass("active");
-    $("#dot2").removeClass("active");
-  });
-
-  $("#dot2").click(function() {
-    $("#work2").fadeIn();
-    $("#work1").hide();
-    $("#dot2").addClass("active");
-    $("#dot1").removeClass("active");
-  });
 })
 
 // Animated header dependant on viewport
@@ -88,10 +68,6 @@ $(function() {
         $(".header").removeClass("header-active");
         $(".link-icon").removeClass("icon-active-mobile");
       }
-    }
-
-    if ($(window).scrollTop() > 280) {
-      $("#aboutFade").fadeIn("slow");
     }
   });
 });

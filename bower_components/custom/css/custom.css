@@ -15,6 +15,15 @@ a {
   list-style: none;
 }
 
+button:hover {
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+button:focus {
+  outline: none;
+}
+
 
 /* Pre-Loader */
 
@@ -110,6 +119,7 @@ a {
   padding: 0;
 }
 
+
 .info {
   padding: 20px;
   text-align: left;
@@ -124,13 +134,9 @@ a {
 }
 
 .holder {
-  max-width: 560px;
+  max-width: 500px;
   margin: auto;
-}
-
-.holder a {
-  font-size: 20px;
-  transition: all 0.2s ease;
+  margin-top: 30px;
 }
 
 .contact-holder {
@@ -149,11 +155,48 @@ a {
 
 .title {
   display: table;
-  border-bottom: 1px solid tomato;
   margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 35px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid tomato;
   font-size: 35px;
+}
+
+
+/* My Work Styles*/
+
+.project-name {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.project-info {
+  min-height: 120px;
+  margin: 0
+}
+
+.project-button-holder {
+  margin-top: -20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.project-button {
+  width: 120px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  color: #757575;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s ease;
 }
 
 
@@ -219,15 +262,6 @@ a {
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
   transition: all 0.2s ease;
-}
-
-.send-button:hover {
-  box-shadow: none;
-  opacity: 0.8;
-}
-
-.send-button:focus {
-  outline: none;
 }
 
 
@@ -357,6 +391,12 @@ a {
 
 /* Media Queries */
 
+@media (max-width: 1580px) {
+  .projects {
+    margin: 0 !important;
+  }
+}
+
 @media (max-width: 780px) {
   .link {
     width: 100%;
@@ -373,6 +413,9 @@ a {
   }
   .caption span.border {
     font-size: 25px;
+  }
+  .title {
+    margin-top: 35px;
   }
   .footer {
     height: 200px;
@@ -399,6 +442,9 @@ a {
     top: 35% !important;
     min-height: 190px !important;
   }
+  .project-button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -410,6 +456,9 @@ a {
   }
   .content {
     padding: 50px 0px !important;
+  }
+  .holder {
+    border: none;
   }
   .contact-holder {
     padding: 50px 20px !important;

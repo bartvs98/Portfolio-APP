@@ -117,29 +117,53 @@
 <div class="content" style="background: #efefef;" id="myWork">
   <div class="title">My Work</div>
 
-  <!-- First "slide" of my work -->
-  <div class="holder" id="work1">
-    <img src="img/investments.jpg" style="width: 100%;">
-    <a href="https://individual-pass.herokuapp.com" class="hover-red">Keep track of your investments</a>
-    <p class="info">
-      {{ work1 }}
-    </p>
-  </div>
+  <div class="projects">
+    <!-- First "slide" of my work -->
+    <div class="holder project-holder" id="work1">
+      <div class="project-name">Investment Tracker</div>
+      <img src="img/investments_compressed.jpg" style="width: 100%;">
+      <a href="https://individual-pass.herokuapp.com" class="hover-red"></a>
+      <p class="project-info info">
+        {{ work1 }}
+      </p>
+      <div class="project-button-holder">
+        <button class="project-button">Website</button>
+        <button class="project-button">Source code</button>
+      </div>
+    </div>
 
-  <!-- Second "slide" of my work -->
-  <div class="holder" id="work2">
-    <img src="img/slide2.jpg" style="width: 100%;">
-    <a href="#!" class="hover-red">Lorem ipsum</a>
-    <p class="info">
-      {{ work2 }}
-    </p>
+    <!-- Second "slide" of my work -->
+    <div class="holder project-holder" id="work2">
+      <div class="project-name">Project name</div>
+      <img src="img/compressed_dummy.jpg" style="width: 100%;">
+      <p class="project-info info">
+        {{ work2 }}
+      </p>
+      <div class="project-button-holder">
+        <button class="project-button">Website</button>
+        <button class="project-button">Source code</button>
+      </div>
+    </div>
+
+    <!-- Third "slide" of my work -->
+    <div class="holder project-holder" id="work2">
+      <div class="project-name">Project name</div>
+      <img src="img/compressed_dummy.jpg" style="width: 100%;">
+      <p class="project-info info">
+        {{ work2 }}
+      </p>
+      <div class="project-button-holder">
+        <button class="project-button">Website</button>
+        <button class="project-button">Source code</button>
+      </div>
+    </div>
   </div>
 
   <!-- Slide dots -->
-  <div id="dots">
+  <!-- <div id="dots">
     <i class="material-icons slide-dot" id="dot1">lens</i>
     <i class="material-icons slide-dot" id="dot2">lens</i>
-  </div>
+  </div> -->
 
   <a id="toContactFormWork">
       <i class="material-icons arrow hover-red">keyboard_arrow_down</i>
