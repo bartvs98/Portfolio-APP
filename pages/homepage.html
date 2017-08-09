@@ -1,34 +1,35 @@
 <!-- Homepage.html -->
+<script src="bower_components\typed.js\lib\typed.min.js"></script>
 <script src="bower_components\custom\js\homepagescript.js"></script>
 
 <!-- Header -->
 <div class="header">
-  <div class="link">
+  <div class="link fade-in">
 
     <a id="toHome">
-        <i class="material-icons linkIcon">home</i>
-        <p class="linkText hoverRed">
+        <i class="material-icons link-icon">home</i>
+        <p class="link-text hover-red">
           Home
         </p>
       </a>
 
     <a id="toAbout">
-        <i class="material-icons linkIcon">info</i>
-        <p class="linkText hoverRed">
+        <i class="material-icons link-icon">info</i>
+        <p class="link-text hover-red">
           About
         </p>
       </a>
 
     <a id="toMyWork">
-        <i class="material-icons linkIcon">work</i>
-        <p class="linkText hoverRed">
+        <i class="material-icons link-icon">work</i>
+        <p class="link-text hover-red">
           My work
         </p>
       </a>
 
     <a id="toContact">
-        <i class="material-icons linkIcon">email</i>
-        <p class="linkText hoverRed">
+        <i class="material-icons link-icon">email</i>
+        <p class="link-text hover-red">
           Contact
         </p>
       </a>
@@ -36,15 +37,15 @@
   </div>
 </div>
 
-<!-- First parallax image -->
+<!-- Parallax image -->
 <div class="bgimg-1" id="home">
   <div class="caption">
     <span class="border"></span>
   </div>
   <div class="caption">
-    <span class="border">
+    <span class="border fade-in">
       <a id="toAboutFromPage">
-        <i class="material-icons arrowDownParallax">keyboard_arrow_down</i>
+        <i class="material-icons arrow arrow-parallax">keyboard_arrow_down</i>
       </a>
     </span>
   </div>
@@ -52,58 +53,63 @@
 
 <!-- About div -->
 <div class="content" id="about">
-  <div class="title">About</div>
+  <div id="aboutFade">
+    <div class="title">About</div>
 
-  <div class="holder">
-    <div class="info">
-      {{ aboutMe }}
+    <div class="holder">
+      <p class="info">
+        {{ aboutMe }}
+      </p>
     </div>
-  </div>
 
-  <!-- About circles -->
-  <div class="cricleHolder">
-    <div class="circleDiv">
-      <div class="circle invert">
-        <p>UML</p>
+    <!-- About circles -->
+    <div class="cricle-holder">
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>UML</p>
+        </div>
+        <span>Unified Modelling Language</span>
       </div>
-      <span>Unified Modelling Language</span>
-    </div>
-    <div class="circleDiv">
-      <div class="circle invert">
-        <p>SQL</p>
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>SQL</p>
+        </div>
+        <span>Structured Query Language</span>
       </div>
-      <span>Structured Query Language</span>
-    </div>
-    <div class="circleDiv">
-      <div class="circle invert">
-        <p>GIT</p>
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>GIT</p>
+        </div>
+        <span>Version Control</span>
       </div>
-      <span>Version Control</span>
-    </div>
-    <div class="circleDiv">
-      <div class="circle invert">
-        <p>CSS</p>
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>CSS</p>
+        </div>
+        <span>Cascading Style Sheets</span>
       </div>
-      <span>Cascading Style Sheets</span>
-    </div>
-    <div class="circleDiv">
-      <div class="circle invert">
-        <p>HTML</p>
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>HTML</p>
+        </div>
+        <span>Hypertext Markup Language</span>
       </div>
-      <span>Hypertext Markup Language</span>
-    </div>
-    <div class="circleDiv">
-      <div class="circle invert">
-        <p>JS</p>
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>JS</p>
+        </div>
+        <span>Javascript</span>
       </div>
-      <span>Javascript</span>
-    </div>
-    <div class="circleDiv">
-      <div class="circle invert">
-        <p>JAVA</p>
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>JAVA</p>
+        </div>
+        <span>Object Oriented Programming Language</span>
       </div>
-      <span>Object Oriented Programming Language</span>
     </div>
+    <a id="toWorkFromAbout">
+      <i class="material-icons arrow hover-red">keyboard_arrow_down</i>
+    </a>
   </div>
 </div>
 
@@ -114,67 +120,68 @@
   <!-- First "slide" of my work -->
   <div class="holder" id="work1">
     <img src="img/investments.jpg" style="width: 100%;">
-    <a href="https://individual-pass.herokuapp.com" class="hoverRed">Keep track of your investments</a>
-    <div class="info">
-      <p>
-        {{ work1 }}
-      </p>
-    </div>
+    <a href="https://individual-pass.herokuapp.com" class="hover-red">Keep track of your investments</a>
+    <p class="info">
+      {{ work1 }}
+    </p>
   </div>
 
   <!-- Second "slide" of my work -->
   <div class="holder" id="work2">
     <img src="img/slide2.jpg" style="width: 100%;">
-    <a href="#!" class="hoverRed">Lorem ipsum</a>
-    <div class="info">
-      <p>
-        {{ work2 }}
-      </p>
-    </div>
+    <a href="#!" class="hover-red">Lorem ipsum</a>
+    <p class="info">
+      {{ work2 }}
+    </p>
   </div>
 
   <!-- Slide dots -->
   <div id="dots">
-    <i class="material-icons slideDot" id="dot1">lens</i>
-    <i class="material-icons slideDot" id="dot2">lens</i>
+    <i class="material-icons slide-dot" id="dot1">lens</i>
+    <i class="material-icons slide-dot" id="dot2">lens</i>
   </div>
+
+  <a id="toContactFormWork">
+      <i class="material-icons arrow hover-red">keyboard_arrow_down</i>
+    </a>
 </div>
 
-<!-- Footer -->
-<div class="contactHolder" id="contact">
+<!-- Contact form -->
+<div class="contact-holder" id="contact">
   <div class="title">Contact</div>
 
   <div style="display:flex; justify-content:center;">
     <div style="display:inline-grid; text-align:left;">
       <p>Shoot me a message for questions or anything of that nature.</p>
-      <input type="email" class="mailInput" placeholder="Your E-mail">
-      <textarea class="mailInput" style="resize: none;" placeholder="Your message" rows="8" cols="80"></textarea>
-      <button class="sendButton" disabled>Send</button>
+      <input type="email" class="mail-input" placeholder="Your E-mail">
+      <textarea class="mail-input" style="resize: none;" placeholder="Your message" rows="8" cols="80"></textarea>
+      <button class="send-button" disabled>Send</button>
     </div>
   </div>
 
 </div>
 
+<!-- Footer -->
 <div class="footer">
-  <div class="footerContent">
-    <div class="copyright">
+  <div class="footer-content">
+    <div class="copyright footer-col-2">
       <p>Created by me © 2017</p>
     </div>
 
-    <div class="arrowUpHolder">
+    <div class="arrow-up-holder">
       <a id="toHomeFromPage">
-        <i class="material-icons arrowUp hoverBlack">keyboard_arrow_up</i>
+        <i class="material-icons arrow arrow-up hover-black">keyboard_arrow_up</i>
       </a>
     </div>
 
-    <div class="footerLinkHolder">
-      <a href="https://github.com/bartvs98" class="footerLink hoverBlack"><i class="fa fa-github" aria-hidden="true"></i></a>
-      <a class="footerLink hoverBlack"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-      <a href="mailto:bartvanstraaten98@gmail.com" class="footerLink hoverBlack"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-      <a href="https://www.reddit.com/user/hierisfreek/" class="footerLink hoverBlack"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a>
+    <div class="footer-col-2">
+      <a href="https://github.com/bartvs98" class="footer-link hover-black"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a class="footer-link hover-black"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="mailto:bartvanstraaten98@gmail.com" class="footer-link hover-black"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.reddit.com/user/hierisfreek/" class="footer-link hover-black"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a>
     </div>
 
-    <div class="copyrightMobile">
+    <div class="copyright-mobile">
       <p>Created by me © 2017</p>
     </div>
   </div>

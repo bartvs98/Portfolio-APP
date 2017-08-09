@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  $(".fade-in").hide();
+  $("#aboutFade").hide();
+
   // Header scrolling
 
   $("#toHome").click(function() {
@@ -30,6 +33,18 @@ $(document).ready(function() {
   $("#toAboutFromPage").click(function() {
     $('html, body').animate({
       scrollTop: $('#about').offset().top
+    }, 'slow');
+  });
+
+  $("#toWorkFromAbout").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#myWork').offset().top
+    }, 'slow');
+  });
+
+  $("#toContactFormWork").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#contact').offset().top
     }, 'slow');
   });
 
@@ -67,22 +82,16 @@ $(function() {
   $(window).on("scroll", function() {
     if (mq.matches) {
       if ($(window).scrollTop() > 730) {
-        $(".header").addClass("headerActive");
-        $(".linkIcon").addClass("iconActiveMobile");
+        $(".header").addClass("header-active");
+        $(".link-icon").addClass("icon-active-mobile");
       } else {
-        $(".header").removeClass("headerActive");
-        $(".linkIcon").removeClass("iconActiveMobile");
+        $(".header").removeClass("header-active");
+        $(".link-icon").removeClass("icon-active-mobile");
       }
-    } else {
-      // if ($(window).scrollTop() > 980) {
-      //   $(".header").addClass("headerActive");
-      //   $(".link a").addClass("linkActive");
-      //   $(".linkIcon").addClass("iconActive");
-      // } else {
-      //   $(".header").removeClass("headerActive");
-      //   $(".link a").removeClass("linkActive");
-      //   $(".linkIcon").removeClass("iconActive");
-      // }
+    }
+
+    if ($(window).scrollTop() > 280) {
+      $("#aboutFade").fadeIn("slow");
     }
   });
 });
@@ -90,14 +99,19 @@ $(function() {
 $(window).on("load", function() {
   // Typed caption
 
-  var options = {
-    strings: ["MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
-    startDelay: 1100,
-    typeSpeed: 50,
-    backSpeed: 20,
-    showCursor: true,
-    cursorChar: "|"
-  }
+  $(function() {
+    var options = {
+      strings: ["MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
+      startDelay: 500,
+      typeSpeed: 40,
+      backSpeed: 20,
+      onComplete: function() {
+        $(".fade-in").fadeIn("slow");
+      }
+    }
 
-  var typed = new Typed(".border", options);
+    var typed = new Typed(".border", options);
+  })
+
+
 })
