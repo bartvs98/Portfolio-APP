@@ -38,6 +38,18 @@ button:focus {
   background: url("../../../img/loading.gif") 50% 50% no-repeat #ffffff;
 }
 
+.errorPage {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 250px;
+  height: 100px;
+  text-align: center;
+}
+
 
 /* Header and header content style */
 

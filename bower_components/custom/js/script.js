@@ -22,7 +22,7 @@ mainApp.config(function($routeProvider) {
 })
 
 // create controller and inject Angular's $scope
-mainApp.controller("mainController", function($scope, $sce, $location, $anchorScroll) {
+mainApp.controller("mainController", function($scope) {
   // create a message to desplay in our view
 
   $scope.aboutMe = "My name is Bart van Straaten, I am situated in The Netherlands. " +
