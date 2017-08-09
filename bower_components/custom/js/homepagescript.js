@@ -1,18 +1,4 @@
 $(document).ready(function() {
-
-  // Typed caption
-
-  var options = {
-    strings: ["MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
-    startDelay: 1100,
-    typeSpeed: 50,
-    backSpeed: 20,
-    showCursor: true,
-    cursorChar: "|"
-  }
-
-  var typed = new Typed(".border", options);
-
   // Header scrolling
 
   $("#toHome").click(function() {
@@ -100,3 +86,18 @@ $(function() {
     }
   });
 });
+
+$(window).on("load", function() {
+  // Typed caption
+
+  var options = {
+    strings: ["MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
+    startDelay: 1100,
+    typeSpeed: 50,
+    backSpeed: 20,
+    showCursor: true,
+    cursorChar: "|"
+  }
+
+  var typed = new Typed(".border", options);
+})
