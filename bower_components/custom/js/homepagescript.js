@@ -64,6 +64,7 @@ $(function() {
       if ($(window).scrollTop() > 730) {
         $(".header").addClass("header-active");
         $(".link-icon").addClass("icon-active-mobile");
+        $(".fade-in").fadeIn("slow");
       } else {
         $(".header").removeClass("header-active");
         $(".link-icon").removeClass("icon-active-mobile");
@@ -77,10 +78,10 @@ $(window).on("load", function() {
 
   $(function() {
     var options = {
-      strings: ["MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
+      strings: ["Hi!^200", "^300MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
       startDelay: 500,
-      typeSpeed: 40,
-      backSpeed: 20,
+      typeSpeed: 50,
+      backSpeed: 50,
       onComplete: function() {
         $(".fade-in").fadeIn("slow");
       }
