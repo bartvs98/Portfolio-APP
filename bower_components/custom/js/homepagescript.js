@@ -1,6 +1,20 @@
 $(document).ready(function() {
   $(".fade-in").hide();
 
+  // Typed caption
+
+  var options = {
+    strings: ["Hi!^200", "^300MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
+    startDelay: 500,
+    typeSpeed: 50,
+    backSpeed: 50,
+    onComplete: function() {
+      $(".fade-in").fadeIn("slow");
+    }
+  }
+
+  var typed = new Typed(".border", options);
+
   // Header scrolling
 
   $("#toHome").click(function() {
@@ -72,23 +86,3 @@ $(function() {
     }
   });
 });
-
-$(window).on("load", function() {
-  // Typed caption
-
-  $(function() {
-    var options = {
-      strings: ["Hi!^200", "^300MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
-      startDelay: 500,
-      typeSpeed: 50,
-      backSpeed: 50,
-      onComplete: function() {
-        $(".fade-in").fadeIn("slow");
-      }
-    }
-
-    var typed = new Typed(".border", options);
-  })
-
-
-})
