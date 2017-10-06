@@ -26,7 +26,7 @@ mainApp.controller("mainController", function($scope) {
   // create a message to desplay in our view
 
   $scope.aboutMe = "My name is Bart van Straaten, I am situated in The Netherlands. " +
-                   "Currently I am studying HBO-ICT at the Hogeschool Utrecht. " +
+                   "Currently I am studying Information Technology at the University of Applied Sciences. " +
                    "I just finished the first year of Software And Information Engineering which is the branch I have chosen to develop myself in. " +
                    "Things I used include but are not limited to:";
 
