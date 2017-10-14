@@ -10,5 +10,10 @@ I will also use this to display my other projects as I make more "apps".
 * **Package Manager:** Bower
 * **Editor:** Atom
 * **Version Control:** Git
+* **Hosting:** Raspberry Pi Apache webserver
 * **Debug:** Chrome Devtools
 * **Browsers tested:** Chrome, Chrome Mobile, Edge, Firefox
+
+## Pull to Raspberry Pi
+* cd /var/www/html
+* sudo git pull origin develop
