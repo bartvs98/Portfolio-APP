@@ -14,6 +14,6 @@ I will also use this to display my other projects as I make more "apps".
 * **Debug:** Chrome Devtools
 * **Browsers tested:** Chrome, Chrome Mobile, Edge, Firefox
 
-## Pull to Raspberry Pi
-* cd /var/www/html
-* sudo git pull origin develop
+### Pull to Raspberry Pi
+1. cd /var/www/html
+2. sudo git pull origin develop
