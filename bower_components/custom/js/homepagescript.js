@@ -1,14 +1,47 @@
 $(document).ready(function() {
+  $(".fade-in").hide();
+
+  // Typed caption
 
   var options = {
-    strings: ["MY NAME IS BART, I'M A WEBDEVELOPER APPRENTICE. ^700 AND THIS IS MY PORTFOLIO"],
+    strings: ["Hi!^200", "^300MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
+    startDelay: 700,
     typeSpeed: 50,
-    backSpeed: 20,
-    showCursor: true,
-    cursorChar: "|"
+    backSpeed: 50,
+    onComplete: function() {
+      $(".fade-in").fadeIn("slow");
+    }
   }
 
-  var typed = new Typed(".element", options);
+  var typed = new Typed(".border", options);
+
+  // Header scrolling
+
+  $("#toHome").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#home').offset().top
+    }, 'slow');
+  });
+
+  $("#toAbout").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#about').offset().top
+    }, 'slow');
+  });
+
+  $("#toMyWork").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#myWork').offset().top
+    }, 'slow');
+  });
+
+  $("#toContact").click(function() {
+    $('html, body').animate({
+      scrollTop: $('#contact').offset().top
+    }, 'slow');
+  });
+
+  // Arrow scrolling
 
   $("#toAboutFromPage").click(function() {
     $('html, body').animate({
@@ -16,13 +49,13 @@ $(document).ready(function() {
     }, 'slow');
   });
 
-  $("#toMyWorkFromPage").click(function() {
+  $("#toWorkFromAbout").click(function() {
     $('html, body').animate({
       scrollTop: $('#myWork').offset().top
     }, 'slow');
   });
 
-  $("#toContactFromPage").click(function() {
+  $("#toContactFormWork").click(function() {
     $('html, body').animate({
       scrollTop: $('#contact').offset().top
     }, 'slow');
@@ -33,46 +66,22 @@ $(document).ready(function() {
       scrollTop: $('#home').offset().top
     }, 'slow');
   });
-
-  $("#work2").hide();
-  $("#dot1").addClass("active");
-
-  $("#dot1").click(function() {
-    $("#work1").fadeIn();
-    $("#work2").hide();
-    $("#dot1").addClass("active");
-    $("#dot2").removeClass("active");
-  });
-
-  $("#dot2").click(function() {
-    $("#work2").fadeIn();
-    $("#work1").hide();
-    $("#dot2").addClass("active");
-    $("#dot1").removeClass("active");
-  });
 })
+
+// Animated header dependant on viewport
 
 $(function() {
   const mq = window.matchMedia("(max-width: 580px)");
 
   $(window).on("scroll", function() {
-    if(mq.matches) {
+    if (mq.matches) {
       if ($(window).scrollTop() > 730) {
-        $(".header").addClass("headerActive");
-        $(".linkIcon").addClass("iconActiveMobile");
+        $(".header").addClass("header-active");
+        $(".link-icon").addClass("icon-active-mobile");
+        $(".fade-in").fadeIn("slow");
       } else {
-        $(".header").removeClass("headerActive");
-        $(".linkIcon").removeClass("iconActiveMobile");
-      }
-    } else {
-      if ($(window).scrollTop() > 980) {
-        $(".header").addClass("headerActive");
-        $(".link a").addClass("linkActive");
-        $(".linkIcon").addClass("iconActive");
-      } else {
-        $(".header").removeClass("headerActive");
-        $(".link a").removeClass("linkActive");
-        $(".linkIcon").removeClass("iconActive");
+        $(".header").removeClass("header-active");
+        $(".link-icon").removeClass("icon-active-mobile");
       }
     }
   });
