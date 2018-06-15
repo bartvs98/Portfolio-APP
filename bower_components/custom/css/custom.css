@@ -102,7 +102,7 @@ button:focus {
 /* Page arrow styles */
 
 .arrow {
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 40px !important;
   cursor: pointer;
   transition: all 0.2s ease;
