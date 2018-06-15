@@ -68,12 +68,6 @@
     <div class="cricle-holder">
       <div class="circle-div">
         <div class="circle invert">
-          <p>UML</p>
-        </div>
-        <span>Unified Modelling Language</span>
-      </div>
-      <div class="circle-div">
-        <div class="circle invert">
           <p>SQL</p>
         </div>
         <span>Structured Query Language</span>
@@ -86,15 +80,9 @@
       </div>
       <div class="circle-div">
         <div class="circle invert">
-          <p>CSS</p>
+          <p>Apex</p>
         </div>
-        <span>Cascading Style Sheets</span>
-      </div>
-      <div class="circle-div">
-        <div class="circle invert">
-          <p>HTML</p>
-        </div>
-        <span>Hypertext Markup Language</span>
+        <span>Oracle Applications</span>
       </div>
       <div class="circle-div">
         <div class="circle invert">
@@ -104,9 +92,27 @@
       </div>
       <div class="circle-div">
         <div class="circle invert">
+          <p>React</p>
+        </div>
+        <span>Javascript library</span>
+      </div>
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>Redux</p>
+        </div>
+        <span>State container</span>
+      </div>
+      <div class="circle-div">
+        <div class="circle invert">
           <p>JAVA</p>
         </div>
-        <span>Object Oriented Programming Language</span>
+        <span>Object Oriented <br/> Programming Language</span>
+      </div>
+      <div class="circle-div">
+        <div class="circle invert">
+          <p>C#</p>
+        </div>
+        <span>Object Oriented <br/> Programming Language</span>
       </div>
     </div>
     <a id="toWorkFromAbout">
@@ -124,13 +130,14 @@
     <div class="holder project-holder" id="work1">
       <div class="project-name">Investment Tracker</div>
       <img src="img/investments_compressed.jpg" style="width: 100%;">
-      <a href="https://individual-pass.herokuapp.com" class="hover-red"></a>
       <p class="project-info info">
         {{ work1 }}
       </p>
       <div class="project-button-holder">
-        <button class="project-button">Website</button>
-        <button class="project-button">Source code</button>
+        <button class="project-button disabled" disabled>Website</button>
+        <a href="https://github.com/bartvs98/IPASS-WebApp">
+          <button class="project-button">Source code</button>
+        </a>
       </div>
     </div>
 
@@ -142,8 +149,8 @@
         {{ work2 }}
       </p>
       <div class="project-button-holder">
-        <button class="project-button">Website</button>
-        <button class="project-button">Source code</button>
+        <button class="project-button disabled" disabled>Website</button>
+        <button class="project-button disabled" disabled>Source code</button>
       </div>
     </div>
 
@@ -155,8 +162,8 @@
         {{ work2 }}
       </p>
       <div class="project-button-holder">
-        <button class="project-button">Website</button>
-        <button class="project-button">Source code</button>
+        <button class="project-button disabled" disabled>Website</button>
+        <button class="project-button disabled" disabled>Source code</button>
       </div>
     </div>
   </div>
@@ -178,10 +185,10 @@
 
   <div style="display:flex; justify-content:center;">
     <div style="display:inline-grid; text-align:left;">
-      <p>Shoot me a message for questions or anything of that nature.</p>
+      <p>Shoot me a message for questions or anything of that nature. (Not implemented!)</p>
       <input type="email" class="mail-input" placeholder="Your E-mail">
       <textarea class="mail-input" style="resize: none;" placeholder="Your message" rows="8" cols="80"></textarea>
-      <button class="send-button" disabled>Send</button>
+      <button class="send-button disabled" disabled>Send</button>
     </div>
   </div>
 

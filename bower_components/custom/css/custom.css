@@ -209,6 +209,12 @@ button:focus {
   transition: all 0.2s ease;
 }
 
+.disabled {
+  box-shadow: none !important;
+  opacity: 0.8 !important;
+  cursor: default !important;
+}
+
 
 /* Footer styles */
 
@@ -248,6 +254,7 @@ button:focus {
   margin: 0;
   margin-bottom: 10px;
   padding: 10px;
+  background: #ffffff;
   font-size: 16px;
   font-family: roboto;
   font-style: italic;
