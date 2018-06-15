@@ -4,7 +4,7 @@ $(document).ready(function() {
   // Typed caption
 
   var options = {
-    strings: ["Hi!^200", "^300MY NAME IS BART^700, I'M A WEBDEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
+    strings: ["Hi!^200", "^300MY NAME IS BART^700, I'M A DEVELOPER APPRENTICE^1000 AND THIS IS MY PORTFOLIO."],
     startDelay: 700,
     typeSpeed: 50,
     backSpeed: 50,
